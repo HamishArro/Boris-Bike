@@ -1,4 +1,6 @@
-describe 'DockingStation' do
+require 'docking_station'
+
+describe DockingStation do
 
 
 end
