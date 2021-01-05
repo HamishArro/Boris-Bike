@@ -1,4 +1,4 @@
-require '/Users/hamisharro/Projects/Boris-bike/lib/bike.rb'
+require '/Users/seanedwards/Makers/january/Boris-Bike/lib/bike.rb'
 
 class DockingStation
 
