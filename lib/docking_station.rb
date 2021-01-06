@@ -1,13 +1,20 @@
-#require '/Users/seanedwards/Makers/january/Boris-Bike/lib/bike.rb'
 require_relative './bike.rb'
+
 class DockingStation
 
  def release_bike
-   Bike.new
+   if bike?()
+     Bike.new
+   end
  end
-def dock_bike
-end
 
-def bike?
- end 
+ def dock(bike)
+   @bike = bike
+ end
+
+ def bike?
+   @bike
+   true
+ end
+
 end
