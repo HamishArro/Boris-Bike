@@ -2,22 +2,23 @@ require_relative './bike.rb'
 
 class DockingStation
 
- def release_bike
-   if bike?()
-     Bike.new
-   else fail "no bikes in station"
+  def initialize
+    @station = Array.new
+  end
 
-   end
- end
+  def release_bike
+    return fail "no bikes in station" unless bike?()
+    return @station.pop
+  end
 
  def dock(bike)
-   @bike = bike
-   return raise "docking station full" unless false
+   @station << bike
+   return raise "docking station full" unless @station.length <= 20
  end
 
  def bike?
-   @bike
-   false
+   return true unless @station.length == 0
+   return false
  end
 
 end
