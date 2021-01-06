@@ -5,6 +5,8 @@ class DockingStation
  def release_bike
    if bike?()
      Bike.new
+   else fail "no bikes in station"
+
    end
  end
 
@@ -14,7 +16,7 @@ class DockingStation
 
  def bike?
    @bike
-   true
+   false
  end
 
 end
